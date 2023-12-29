@@ -1,5 +1,6 @@
 import 'package:button_time/Index.dart';
 import 'package:button_time/task_list.dart';
+import 'package:button_time/SimpleCalendar.dart';
 import 'package:button_time/tray_utils.dart';
 import 'package:button_time/tray_watcher.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +30,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  var pages = [const Index(), const TaskList()];
+  var pages = [const Index(), const TaskList(),SimpleCalendar()];
   var currentIndex = 0;
 
   @override
@@ -50,7 +51,8 @@ class _MyHomePageState extends State<MyHomePage> {
         },
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: '首页'),
-          BottomNavigationBarItem(icon: Icon(Icons.list), label: '列表')
+          BottomNavigationBarItem(icon: Icon(Icons.list), label: '列表'),
+          BottomNavigationBarItem(icon: Icon(Icons.transfer_within_a_station), label: '测试'),
         ],
       ),
     );
